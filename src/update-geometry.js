@@ -8,10 +8,13 @@ import { toInt } from './lib/util';
 export default function(i) {
   const element = i.element;
   const roundedScrollTop = Math.floor(element.scrollTop);
-  const rect = element.getBoundingClientRect();
+  //const rect = element.getBoundingClientRect();
 
-  i.containerWidth = Math.floor(rect.width);
-  i.containerHeight = Math.floor(rect.height);
+  //i.containerWidth = Math.floor(rect.width);
+  //i.containerHeight = Math.floor(rect.height);
+
+  i.containerWidth = Math.floor(element.clientWidth);
+  i.containerHeight = Math.floor(element.clientHeight);
 
   i.contentWidth = element.scrollWidth;
   i.contentHeight = element.scrollHeight;
